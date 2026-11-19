@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050712">
+  <title>Combat Fighter: Cosmic Survival</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Cosmic Survival home"><span class="brand-mark">✦</span> COSMIC <b>SURVIVAL</b></a>
+      <div class="top-actions">
+        <button id="screenBtn" class="icon-btn" aria-label="Switch between full screen and half screen">⛶ Full screen</button>
+        <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">🔊 Sound</button>
+        <button id="pauseBtn" class="icon-btn" aria-label="Pause game">Ⅱ Pause</button>
+      </div>
+    </header>
+
+    <section class="game-shell" aria-label="Asteroids game">
+      <div class="hud">
+        <div><small>LEVEL</small><strong id="levelLabel">1 / 5</strong></div>
+        <div><small>SHIELDS / LIVES</small><strong id="livesLabel">♥ ♥ ♥</strong></div>
+        <div><small>SCORE</small><strong id="scoreLabel">000000</strong></div>
+        <div><small>BEST</small><strong id="bestLabel">000000</strong></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="c" width="960" height="600" aria-label="Gameplay canvas"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="panel">
+            <div class="eyebrow">ARCADE FLIGHT • SURVIVAL MISSION</div>
+            <h1 id="overlayTitle">COMBAT <span>FIGHTER</span></h1>
+            <p id="overlayText">Fly your fighter jet through the asteroid field. Blast rocks with cannons and missiles, dodge with a barrel roll, and survive five sectors before the final boss.</p>
+            <div id="menuActions" class="menu-actions">
+              <button id="playBtn" class="primary-btn">▶ Start mission</button>
+              <button id="howBtn" class="secondary-btn">How to play</button>
+              <button id="scoresBtn" class="secondary-btn">High scores</button>
+              <button id="settingsBtn" class="secondary-btn">Pilot level</button>
+            </div>
+            <p id="overlayHint" class="hint">Fly: WASD / arrows · Aim: mouse · Cannon: Space · Scan: C · Missile: M · Dodge roll: Shift · Full screen: F · Pause: P</p>
+          </div>
+        </div>
+        <div id="toast" class="toast" aria-live="polite"></div>
+      </div>
+      <div class="bottomline">
+        <span><i class="dot"></i> MISSION STATUS: <b id="statusLabel">READY</b></span>
+        <span id="remainingLabel">ASTEROIDS: —</span>
+      </div>
+    </section>
+
+    <!-- On-screen controls (touch and mouse). Missile, Dodge and Restart buttons are added next to FIRE by game.js -->
+    <section class="controls" aria-label="On-screen controls">
+      <div class="move-pad">
+        <button data-k="up" aria-label="Move up">▲</button>
+        <div><button data-k="left" aria-label="Move left">◀</button><button data-k="down" aria-label="Move down">▼</button><button data-k="right" aria-label="Move right">▶</button></div>
+      </div>
+      <button id="fireTouch" class="fire-btn">✦ FIRE</button>
+    </section>
+
+    <!-- Quick controls: these tiles are real buttons you can click or tap -->
+    <section class="help-strip" aria-label="Quick controls">
+      <div><b>FLY, AIM &amp; SCAN</b><span>WASD / arrows · mouse aims · C scans</span></div>
+      <button type="button" id="helpFire"><b>SHOOT</b><span>Space · or hold this tile</span></button>
+      <button type="button" id="helpPause"><b>PAUSE</b><span>P / Esc · or click here</span></button>
+      <button type="button" id="helpRestart"><b>RESTART</b><span>R · or click here</span></button>
+    </section>
+    <footer>Built as a student game-development project · Scores are saved in this browser</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

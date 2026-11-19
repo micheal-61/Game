@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+:root{color-scheme:dark;--bg:#050712;--panel:#0b1020;--line:rgba(125,160,255,.2);--cyan:#63f4e4;--blue:#6a8cff;--text:#eef3ff;--muted:#8e9bb8;--red:#ff5b62}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -15%,#172343 0%,#080b18 45%,#03040a 100%);color:var(--text);font-family:Inter,system-ui,sans-serif;padding:22px 14px 30px}
+button{font:inherit;cursor:pointer;color:inherit}.app{max-width:1120px;margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;margin:0 0 15px;gap:12px}.brand{font:700 16px Orbitron,sans-serif;letter-spacing:2px;color:#fff;text-decoration:none}.brand b{color:var(--cyan)}.brand-mark{color:var(--cyan);font-size:22px;margin-right:8px}.top-actions{display:flex;gap:8px}.icon-btn,.secondary-btn{border:1px solid var(--line);background:#0d1428;border-radius:10px;padding:9px 13px;color:#cbd6f5}.icon-btn:hover,.secondary-btn:hover{border-color:var(--cyan);color:white}
+.game-shell{border:1px solid rgba(117,154,255,.25);border-radius:17px;overflow:hidden;background:#070b17;box-shadow:0 24px 90px #0009,0 0 35px #1b5d8a12}.hud{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px 20px;background:linear-gradient(90deg,#0b1226,#10152b,#0b1226);border-bottom:1px solid var(--line)}.hud div{display:flex;flex-direction:column;gap:5px}.hud small{font:600 10px Orbitron,sans-serif;color:#7f91b9;letter-spacing:1.6px}.hud strong{font:700 16px Orbitron,sans-serif;letter-spacing:1px}.canvas-wrap{position:relative;background:#03040a;line-height:0}canvas{display:block;width:100%;height:auto;aspect-ratio:8/5;touch-action:none}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(90deg,rgba(3,5,13,.86),rgba(3,5,13,.55),rgba(3,5,13,.84));line-height:1.5}.overlay.hidden{display:none}.panel{max-width:650px;text-align:center}.eyebrow{font:600 10px Orbitron,sans-serif;color:var(--cyan);letter-spacing:3px;margin-bottom:13px}.panel h1{font:800 clamp(27px,5vw,52px) Orbitron,sans-serif;line-height:1.1;margin:0 0 15px;letter-spacing:1px;text-shadow:0 0 25px #50e9e455}.panel h1 span{color:var(--cyan)}.panel p{max-width:590px;margin:0 auto 20px;color:#c0cbe4;font-size:14px}.menu-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:18px 0}.primary-btn{background:linear-gradient(120deg,#50dfd2,#5e8dff);color:#07101d;font-weight:800;border:0;border-radius:10px;padding:12px 19px;box-shadow:0 6px 25px #48dcd333}.primary-btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.hint{font-size:11px!important;color:#8291b2!important;margin-bottom:0!important}.bottomline{display:flex;justify-content:space-between;gap:10px;padding:11px 17px;font:600 10px Orbitron,sans-serif;letter-spacing:1px;color:#8c9ab8;background:#080d1b;border-top:1px solid var(--line)}.bottomline b{color:var(--cyan)}.dot{display:inline-block;width:6px;height:6px;background:var(--cyan);border-radius:50%;margin-right:7px;box-shadow:0 0 9px var(--cyan)}.toast{position:absolute;top:16%;left:50%;transform:translate(-50%,-8px);opacity:0;pointer-events:none;padding:10px 16px;border:1px solid #63f4e488;border-radius:9px;background:#071526dd;color:var(--cyan);font:700 13px Orbitron,sans-serif;transition:.2s;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.controls{display:none;align-items:center;justify-content:space-between;padding:16px 5px 5px}.move-pad{text-align:center}.move-pad button,.fire-btn{border:1px solid #6a8cff55;background:#111a31;border-radius:10px;min-width:48px;min-height:43px;font-size:18px}.move-pad>div{display:flex;gap:5px;margin-top:5px}.move-pad button:active,.move-pad button.on{background:#276c7d}.fire-btn{height:80px;min-width:95px;background:linear-gradient(135deg,#922e47,#451c42);border-color:#ff6c8c66;font:700 13px Orbitron,sans-serif;color:#ffcad8}.help-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0}.help-strip div{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#0a0e1b;display:flex;flex-direction:column;gap:5px}.help-strip b{font:700 10px Orbitron,sans-serif;color:var(--cyan);letter-spacing:1px}.help-strip span{font-size:12px;color:#9ba8c6}footer{text-align:center;color:#56617c;font-size:11px;padding:9px}
+@media(max-width:650px){body{padding:12px 8px 20px}.brand{font-size:12px;letter-spacing:1px}.icon-btn{font-size:11px;padding:8px}.hud{padding:10px;gap:4px}.hud small{font-size:8px;letter-spacing:.7px}.hud strong{font-size:11px}.bottomline{font-size:8px;padding:9px}.controls{display:flex}.help-strip{grid-template-columns:repeat(2,1fr)}.panel p{font-size:12px}.eyebrow{font-size:8px;letter-spacing:1.5px}.menu-actions{gap:6px}.primary-btn,.secondary-btn{font-size:12px;padding:10px 12px}}
+@media(hover:none) and (pointer:coarse){.controls{display:flex}}
+
+/* ===== FIXES ADDED ===== */
+
+/* On-screen controls are visible on every device, and wrap on small screens */
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.fire-btn.extra{height:56px;min-width:84px;font-size:12px}
+.fire-btn.on,.fire-btn:active{filter:brightness(1.3);transform:scale(.97)}
+
+/* The help tiles (SHOOT / PAUSE / RESTART) are real buttons now */
+.help-strip button{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#0a0e1b;display:flex;flex-direction:column;gap:5px;text-align:left;touch-action:none;user-select:none}
+.help-strip button:hover,.help-strip button.on{border-color:var(--cyan);background:#0f1730}
+
+/* ===== FULL SCREEN / HALF SCREEN ===== */
+/* "is-full" is added by game.js in real full screen and in the fallback mode used on phones.
+   Everything (HUD, game, buttons) is resized to fit the screen so it is all visible. */
+.app.is-full{max-width:none;width:100%;height:100vh;height:100dvh;margin:0;padding:8px;display:flex;flex-direction:column;gap:8px;background:#03040a;overflow:hidden}
+body.pseudo-full{overflow:hidden}
+body.pseudo-full .app{position:fixed;inset:0;z-index:9999}
+.app.is-full .topbar{margin:0}
+.app.is-full .game-shell{flex:1;min-height:0;display:flex;flex-direction:column}
+.app.is-full .canvas-wrap{flex:1;min-height:0}
+.app.is-full canvas{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+.app.is-full .help-strip,.app.is-full footer{display:none}
+.app.is-full .controls{padding:2px 5px}
+.app.is-full .fire-btn{height:56px}
+.app.is-full .hud{padding:8px 16px}
